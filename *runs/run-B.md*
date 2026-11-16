@@ -1,0 +1,23 @@
+# Validation Run B (Student B)
+
+
+| ID | Item | Answer | Evidence | Where question came from |
+| :--- | :--- | :--- | :--- | :--- |
+| CL-001 | Does each requirement contain only one "shall" or "may" statement? | No | R-07 combines three separate actions into one requirement. | Rule: Clear |
+| CL-002 | Is every requirement free of undefined vague words (e.g., "quickly", "user-friendly", "securely", "normal", "policy")? | No | R-02, R-08, R-09, R-12, and R-13 all contain vague, undefined terms. | Rule: Clear |
+| CL-003 | Does every speed or time requirement state a number with a unit? | No | R-02 ("quickly") and R-12 ("normal working hours") lack numbers and units. | Rule: Testable |
+| CL-004 | Could a pass/fail test be written for every requirement? | No | R-02, R-08, R-09, and R-13 are too vague to write a clear pass/fail test. | Rule: Testable |
+| CL-005 | Are all appointment duration rules free of contradictions? | No | R-04 states 15 minutes per appointment, while R-05 allows 10–30 minutes. | Rule: Free of contradictions |
+| CL-006 | Does the document define what happens when a reminder fails to reach a patient? | No ? | R-06 states reminders shall be sent, with no error handling or retry rule. | Rule: Complete |
+| CL-007 | Does the document specify how the system stops two users from booking the exact same time slot? | No | R-03 states the goal ("prevent double bookings") but not how it works. | Risk: Double bookings |
+| CL-008 | Does the document state how many minutes before an appointment a reminder is sent? | No | R-06 does not specify the lead time or channel (SMS/email) for reminders. | Risk: Forgotten appointments |
+| CL-009 | Does the document define a cutoff time before an appointment after which online cancellation is blocked? | No | R-07 permits cancellation "at any time," leaving no notice window for the clinic. | Risk: Late cancellations |
+| CL-010 | Does the document specify how many concurrent users the system must support during Monday morning peak hours? | No | Missing requirement; no peak-hour traffic or speed limit is defined. | Risk: Monday morning rush |
+| CL-011 | Does the document state a backup plan if the online system goes offline during clinic hours? | N/A ? | Unsure if offline backup belongs in the SRS or a separate clinic manual. | Risk: System downtime |
+| CL-012 | Does the document state how a patient receives confirmation after booking an appointment? | No | R-01 covers booking, but omits confirmation messages or booking receipts. | User: Patient |
+| CL-013 | Does the document state whether doctors can block off unavailable time slots on their schedule? | No | R-14 only covers viewing schedules, not blocking out unavailable times. | User: Doctor |
+| CL-014 | Does the document specify how emergency walk-in patients are given priority over routine bookings? | No | R-10 allows walk-in booking, but does not mention emergency priority. | User: Receptionist |
+| CL-015 | Does the document state how a clinic administrator adds new doctors to the system? | No | Missing requirement; no user management functions exist for administrators. | User: Clinic administrator |
+| CL-016 | Does the document specify which user roles may view a patient's medical record? | No | R-09 lacks role-based access permissions and data privacy rules. | User: Data protection officer |
+| CL-017 | Does the document specify accessibility features (such as large text or screen reader support) for elderly patients? | No | R-08 mentions "all age groups" but lists no measurable accessibility features. | Risk: Elderly patients excluded |
+| CL-018 | Does the document define the exact "clinic policy" rules for handling overdue payments? | No | R-13 leaves payment rules undefined by pointing to an external "clinic policy." | Rule: Complete |
